@@ -1,4 +1,6 @@
-package br.com.zup;
+package br.com.zup.ContaCorrente;
+
+import br.com.zup.ContaCorrente.Contacorrente;
 
 public class Main {
 
