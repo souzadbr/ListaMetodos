@@ -1,34 +1,48 @@
 package br.com.zup.CartaoDeCredito;
-
+//finalizar
 public class CartaoCredito {
     String nomeCliente;
-    double limite = 1000;
+    double limite;
     double saldo;
 
-    public CartaoCredito (String nomeCliente, double limite, double saldo){
+    //Métodos construtor
+    public CartaoCredito(String nomeCliente, double limite, double saldo) {
         this.nomeCliente = nomeCliente;
         this.limite = limite;
         this.saldo = saldo;
 
     }
-    public void fatura (){
-        System.out.println("Nome do cliente: "+ nomeCliente);
-        System.out.println("Limite disponivel: R$ " +limite);
-        System.out.println("Saldo: R$ "+saldo);
-    }
-    public void aumentarLimite (double aumentandoLimite){
-        limite = limite + aumentandoLimite;
-    }
-    public void diminuiLimite (double diminuindoLimite){
-        limite = limite -diminuindoLimite;
-    }
-    public void realizarCompra(double comprar){
-        if (saldo == limite){
-        saldo = limite - comprar;
-        }else{
-            System.out.println("Você não tem limite o sufiente, ajuste seu limite!");
-        }
+
+    //Métodos exibe dados do cartão do cliente
+    public void exibirDados(){
+        System.out.println("Nome do titular do cartão: "+ nomeCliente);
+        System.out.println("Saldo da fatura: "+saldo);
+        System.out.println("Este é o limite que o cliente tem no seu cartão "+ limite);
     }
 
+    //Método aumenta limite
 
+    public void aumentaLimite (double aumentandoLiminte){
+        limite = limite + aumentandoLiminte;
+    }
+    //Métodos diminui limite
+
+    public void diminiuLimite (double diminuindoLimite){
+        limite = limite - diminuindoLimite;
+    }
+    //Método realizar compra
+
+    public void realizaCompra (double compraRealizada){
+       if (compraRealizada<= limite) {
+           System.out.println("Compra realizada com sucesso");
+           limite = limite - compraRealizada;
+           saldo = saldo + compraRealizada;
+       }else{
+           System.out.println("Saldo insuficiente");
+       }
+    }
+    public void imprimirFaturaCartão (){
+        System.out.println("Limite do cartão é: "+limite);
+        System.out.println("Sua fatura atual é: "+ saldo);
+    }
 }
