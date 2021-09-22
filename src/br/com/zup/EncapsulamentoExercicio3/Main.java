@@ -6,7 +6,6 @@ public class Main {
         humano.mostrarDados();
         humano.idadeAtual(2021);
 
-
-
     }
+
 }
