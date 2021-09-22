@@ -1,5 +1,7 @@
 package br.com.zup.Lista_ComplementarExe1;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Bola {
     String cor;
     double circunferencia;
@@ -19,6 +21,10 @@ public class Bola {
       cor = novaCor;
 
     }
+    public void mostrarCor(){
+        System.out.println("A cor da minha bola é: "+cor);
+    }
+
 
 
 
