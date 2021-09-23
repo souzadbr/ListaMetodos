@@ -7,6 +7,8 @@ public class Main {
         System.out.println("---------");
         bola1.trocarCor("Vermelho");
         bola1.mostrarCor();
+        System.out.println("---------");
+        bola1.mostrartDados();
 
 
     }
